@@ -423,10 +423,9 @@ function closePanel() {
   console.log("inside close panel");
   $("#details").toggleClass("showing", false);
 }
-function generate_env_table(name)
+function generate_env_table()
 {
-  document.getElementById("env_details").innerHTML=name+" environment details";
-  document.getElementById("env_table").innerHTML = "<table><tr> <th>Environment Name</th><th>Environment type</th><th> Packages/tools included</th><th>Compatible version</th><th>Description</th><th>Link to setup</th></tr><tr><td>drupal-RT-env</td><td>Red Teaming</td><td>drupal, php, apache, chrome, mysql</td><td>drupal:8.6.5, php:7.2.24, apache:2.3, chrome97.0, mysql:14.14</td><td>User will get drupal 8.6.5 with with all its dependencies.</td><td>TBD</td></tr><tr><td>drupal-BT-env</td><td>Blue Teaming</td><td>drupal, php, apache, chrome, mysql</td><td>drupal:8.6.5, php:7.2.24, apache:2.3, chrome97.0, mysql:14.14</td><td>User will get drupal 8.6.5 with with all its dependencies.</td><td>TBD</td></tr></table>"
+  document.getElementById("env_table").innerHTML = "<table><tr> <th>Environment Name</th><th>Environment type</th><th> Project version</th><th>Vulnerability exploited</th><th>Exploit details</th><th>Patch availability</th><th>Date of patch published</th> </tr><tr><td>Hello world</td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
 }
 function load_data(id,name)
 {
@@ -448,10 +447,10 @@ function load_data(id,name)
     replace_div();
     closePanel();
     button_visibility();
-    if (name == "drupal")
-    {
-      generate_env_table(name);
-    }
+    // if (name == "drupal")
+    // {
+    //   generate_env_table();
+    // }
     // closeSidebar();
   })
   .catch(function (err) {
