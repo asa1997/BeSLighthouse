@@ -10,7 +10,7 @@ function totalProject(main_div_content, listOfPOI) {
 function open_bes_version_history(id, name) {
   localStorage["id"] = id;
   localStorage["name"] = name;
-  window.open("../bes_version_history", "_self");
+  window.open("../../bes_version_history", "_self");
 }
 
 function tableForProject(listOfPOI) {
