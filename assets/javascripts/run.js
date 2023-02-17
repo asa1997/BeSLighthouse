@@ -435,7 +435,7 @@ function load_data(id,name)
 {
   localStorage["id"] = id;
   localStorage["name"] = name;
-  window.open("../../bes_version_history");
+  window.open("../bes_version_history");
   // document.getElementById("cve_header").innerHTML = "Vulnerability Statistics:"+name;
   // // assets/data/OSSPCVE/50-prometheus-CVEdetails.json
   // fetch('../assets/data/OSSPCVE/'+id+'-'+name+'-CVEdetails.json')
