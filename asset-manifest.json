@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/BeSLighthouse/static/css/main.ff5aa13f.chunk.css",
+    "main.js": "/BeSLighthouse/static/js/main.89a0c9cd.chunk.js",
+    "main.js.map": "/BeSLighthouse/static/js/main.89a0c9cd.chunk.js.map",
+    "runtime-main.js": "/BeSLighthouse/static/js/runtime-main.3ccf36af.js",
+    "runtime-main.js.map": "/BeSLighthouse/static/js/runtime-main.3ccf36af.js.map",
+    "static/js/2.09d4d7cc.chunk.js": "/BeSLighthouse/static/js/2.09d4d7cc.chunk.js",
+    "static/js/2.09d4d7cc.chunk.js.map": "/BeSLighthouse/static/js/2.09d4d7cc.chunk.js.map",
+    "index.html": "/BeSLighthouse/index.html",
+    "static/css/main.ff5aa13f.chunk.css.map": "/BeSLighthouse/static/css/main.ff5aa13f.chunk.css.map",
+    "static/js/2.09d4d7cc.chunk.js.LICENSE.txt": "/BeSLighthouse/static/js/2.09d4d7cc.chunk.js.LICENSE.txt",
+    "static/media/favicon.1aa0488b.png": "/BeSLighthouse/static/media/favicon.1aa0488b.png",
+    "static/media/Tabler.css": "/BeSLighthouse/static/media/feather-webfont.b5fc8ffc.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3ccf36af.js",
+    "static/js/2.09d4d7cc.chunk.js",
+    "static/css/main.ff5aa13f.chunk.css",
+    "static/js/main.89a0c9cd.chunk.js"
+  ]
+}
