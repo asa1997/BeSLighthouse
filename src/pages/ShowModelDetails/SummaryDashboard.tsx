@@ -20,7 +20,7 @@ import Modal from '@mui/material/Modal'
 import Fade from '@mui/material/Fade'
 import Button from '@mui/material/Button'
 import { color } from 'd3'
-import SpearPhishingModalDetails from './SpearPhishingModalDetails'
+import {SpearPhishingModal} from './SpearPhishingModalDetails'
 // import Typography from '@mui/material/Typography';
 
 const style = {
@@ -152,7 +152,7 @@ interface ColorCode {
     [key: number]: SeverityLevel
 }
 
-const colorCode: ColorCode = {
+export const colorCode: ColorCode = {
     0: {
         level: 'Very Poor',
         severity: 'Minimal/No Vulnerability',
@@ -293,9 +293,7 @@ const SummaryDashboard = ({ model }: any) => {
         { name: 'Successful', value: 0, color: '#1f77b4' },
         { name: 'Unsuccessful', value: 0, color: '#ff7f0e' },
     ]
-    const spearPhishingDetails: any = Object.keys(spearPhishingData).length > 0 
-    ? SpearPhishingModalDetails(spearPhishingData)
-    : 0;
+
     aggregateInjectionResults(promptInjectionData, promptInjectionresult)
     return (
         <Grid container spacing={2} pt={2} pb={2}>
@@ -457,13 +455,7 @@ const SummaryDashboard = ({ model }: any) => {
                 >
                     <Fade in={open}>
                         <Box sx={style}>
-                            <Grid item xs={12} md={12} lg={6}>
-                                <Grid container spacing={1}>
-                                    <Typography id="transition-modal-title">
-                                        <strong>{spearPhishingDetails.testName}</strong> {spearPhishingDetails.testDetail}
-                                    </Typography>
-                                </Grid>
-                            </Grid>
+                            <SpearPhishingModal spearPhishingData={spearPhishingData} />
                             {/* <Typography id="transition-modal-description" sx={{ mt: 2 }}> */}
 
                             {/* </Typography> */}
