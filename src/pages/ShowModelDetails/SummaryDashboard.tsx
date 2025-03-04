@@ -23,11 +23,14 @@ import { color } from 'd3'
 import {SpearPhishingModal} from './SpearPhishingModalDetails'
 // import Typography from '@mui/material/Typography';
 
-const style = {
+const modalStyle = {
     position: 'absolute',
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
+    maxHeight: '90%',
+    overflow: 'auto',
+    maxWidth: '90%',
     width: 1200,
     height: 800,
     bgcolor: 'background.paper',
@@ -213,6 +216,7 @@ function aggregateInjectionResults(
 
 const SummaryDashboard = ({ model }: any) => {
     const selectedModel = model.length > 0 ? model[0] : {}
+    console.log('selectedModel', selectedModel)
     const urls = [
         `${besecureMlAssessmentDataStore}/${selectedModel.name}/llm-benchmark/${selectedModel.name}-interpreter-test-summary-report.json`,
         `${besecureMlAssessmentDataStore}/${selectedModel.name}/llm-benchmark/${selectedModel.name}-autocomplete-test-summary-report.json`,
@@ -454,8 +458,8 @@ const SummaryDashboard = ({ model }: any) => {
                     }}
                 >
                     <Fade in={open}>
-                        <Box sx={style}>
-                            <SpearPhishingModal spearPhishingData={spearPhishingData} />
+                        <Box sx={modalStyle}>
+                            <SpearPhishingModal spearPhishingData={spearPhishingData} modelName={selectedModel.name} />
                             {/* <Typography id="transition-modal-description" sx={{ mt: 2 }}> */}
 
                             {/* </Typography> */}
