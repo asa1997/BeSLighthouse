@@ -28,7 +28,7 @@ const modalStyle = {
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    maxHeight: '90%',
+    maxHeight: 'fit-content',
     overflow: 'auto',
     maxWidth: '90%',
     width: 1200,
