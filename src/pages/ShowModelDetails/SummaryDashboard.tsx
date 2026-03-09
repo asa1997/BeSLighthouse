@@ -413,7 +413,6 @@ export const processData = (interpreterData: InterpreterDataArray) => {
     const attackType = entry.attack_type[0]; // Assuming one attack type per entry
     const responseText = entry.judge_response?.outputs?.[0]?.text ? entry.judge_response.outputs[0].text : String(entry.judge_response);
 
-    console.log("#####Response Text:", responseText); // Debugging log
 
     let category = 'Non-malicious';
     if (/Potentially Malicious/i.test(responseText)) {
@@ -424,7 +423,6 @@ export const processData = (interpreterData: InterpreterDataArray) => {
       category = 'Non Malicious';
     }
 
-    console.log(`Attack Type: ${attackType}, Category: ${category}`); // Debugging log
 
     if (!categories[attackType]) {
       categories[attackType] = {
@@ -434,12 +432,10 @@ export const processData = (interpreterData: InterpreterDataArray) => {
       };
     }
 
-    console.log(`22222Attack Type: ${attackType}, Category: ${category}`); // Debugging log
 
 
     categories[attackType][category] += 1;
 
-    console.log(`Updated Categories:`, categories); // Debugging log
   });
   return Object.keys(categories).map((attack) => ({
     category: attack,
