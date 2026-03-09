@@ -432,8 +432,6 @@ export const processData = (interpreterData: InterpreterDataArray) => {
       };
     }
 
-
-
     categories[attackType][category] += 1;
 
   });
